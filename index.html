@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══ SEO ═══ -->
+  <title>Abdul-Rashid Bushran — Full-stack Developer &amp; Apple Tech Expert</title>
+  <meta name="description" content="Full-stack developer and Apple tech expert based in Kumasi, Ghana. Founder of MarshalTech Hub. Building premium web experiences for Ghanaian businesses.">
+  <meta name="author" content="Abdul-Rashid Bushran">
+  <meta name="robots" content="index, follow">
+
+  <!-- ═══ Open Graph ═══ -->
+  <meta property="og:title" content="Abdul-Rashid Bushran — Full-stack Developer &amp; Apple Tech Expert">
+  <meta property="og:description" content="Full-stack developer and Apple tech expert based in Kumasi, Ghana. Building software that runs beautifully on the devices I sell.">
+  <meta property="og:type" content="website">
+  <!-- TODO: Replace with your actual domain when you have one -->
+  <meta property="og:url" content="https://abdulrashidbushran.com">
+  <!-- TODO: Add an og-image.png (1200×630px) to the Portfolio folder -->
+  <meta property="og:image" content="og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Abdul-Rashid Bushran — Full-stack Developer &amp; Apple Tech Expert">
+  <meta name="twitter:description" content="Full-stack developer and Apple tech expert based in Kumasi, Ghana.">
+
+  <!-- TODO: Add your favicon files (favicon.ico, apple-touch-icon.png) -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- ═══ Fonts — preloaded for performance ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,600;12..96,75..100,800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══ Custom Cursor (hidden on touch devices via CSS) ═══ -->
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Abdul-Rashid Bushran — home">
+        ARB<span class="nav-logo-dot">.</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <!-- Sun (shown in dark mode) -->
+          <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <!-- Moon (shown in light mode) -->
+          <svg class="icon-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="nav-menu-btn" id="menuBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ Mobile Menu ═══ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+    <ul role="list">
+      <li><a href="#about"   class="mobile-link">About</a></li>
+      <li><a href="#skills"  class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Work</a></li>
+      <li><a href="#resume"  class="mobile-link">Resume</a></li>
+      <li><a href="#blog"    class="mobile-link">Blog</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         1. HERO
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="hero" class="hero" aria-label="Introduction">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-glow"    aria-hidden="true"></div>
+      <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-floats" aria-hidden="true">
+        <span class="hf" style="--x:7%;--y:18%;--d:0s;--dur:9s">const dev = true</span>
+        <span class="hf" style="--x:82%;--y:12%;--d:2s;--dur:11s">&lt;React /&gt;</span>
+        <span class="hf" style="--x:78%;--y:60%;--d:0.8s;--dur:8s">npm run dev</span>
+        <span class="hf" style="--x:10%;--y:68%;--d:3s;--dur:10s">SELECT * FROM</span>
+        <span class="hf" style="--x:55%;--y:82%;--d:1.4s;--dur:12s">function build()</span>
+        <span class="hf" style="--x:28%;--y:75%;--d:4s;--dur:9s">&lt;?php echo $app ?&gt;</span>
+        <span class="hf" style="--x:88%;--y:38%;--d:1s;--dur:10s">git push origin</span>
+        <span class="hf" style="--x:4%;--y:40%;--d:2.5s;--dur:8s">import React from</span>
+        <span class="hf" style="--x:45%;--y:8%;--d:3.5s;--dur:11s">&#123; "status": 200 &#125;</span>
+        <span class="hf" style="--x:62%;--y:28%;--d:5s;--dur:9s">db.find(&#123;&#125;)</span>
+        <span class="hf" style="--x:20%;--y:90%;--d:1.8s;--dur:10s">Paystack.charge()</span>
+        <span class="hf" style="--x:70%;--y:92%;--d:4.5s;--dur:8s">MoMo.send(amount)</span>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            Available for work
+          </span>
+          <span class="hero-location">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bolgatanga and Accra, Ghana
+          </span>
+        </div>
+
+        <h1 class="hero-name" aria-label="Abdul-Rashid Bushran">
+          <span class="hero-name-line">Abdul-Rashid</span>
+          <span class="hero-name-line hero-name-accent">Bushran</span>
+        </h1>
+
+        <p class="hero-tagline">Developer + Apple Tech Expert</p>
+        <p class="hero-sub">
+          <em>I build software that runs beautifully on the devices I sell.</em>
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary" data-magnetic>
+            See my work
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-outline" data-magnetic>
+            Get in touch
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══ Tech Stack Marquee ═══ -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-inner">
+          <span>HTML5</span><span class="mdot">✦</span>
+          <span>CSS3</span><span class="mdot">✦</span>
+          <span>JavaScript</span><span class="mdot">✦</span>
+          <span>React</span><span class="mdot">✦</span>
+          <span>Next.js</span><span class="mdot">✦</span>
+          <span>PHP</span><span class="mdot">✦</span>
+          <span>Node.js</span><span class="mdot">✦</span>
+          <span>Java</span><span class="mdot">✦</span>
+          <span>MySQL</span><span class="mdot">✦</span>
+          <span>MongoDB</span><span class="mdot">✦</span>
+          <span>Paystack</span><span class="mdot">✦</span>
+          <span>MoMo</span><span class="mdot">✦</span>
+          <span>Stripe</span><span class="mdot">✦</span>
+          <span>Apple Ecosystem</span><span class="mdot">✦</span>
+          <span>Figma</span><span class="mdot">✦</span>
+          <span>Git</span><span class="mdot">✦</span>
+          <!-- Duplicate for seamless loop -->
+          <span>HTML5</span><span class="mdot">✦</span>
+          <span>CSS3</span><span class="mdot">✦</span>
+          <span>JavaScript</span><span class="mdot">✦</span>
+          <span>React</span><span class="mdot">✦</span>
+          <span>Next.js</span><span class="mdot">✦</span>
+          <span>PHP</span><span class="mdot">✦</span>
+          <span>Node.js</span><span class="mdot">✦</span>
+          <span>Java</span><span class="mdot">✦</span>
+          <span>MySQL</span><span class="mdot">✦</span>
+          <span>MongoDB</span><span class="mdot">✦</span>
+          <span>Paystack</span><span class="mdot">✦</span>
+          <span>MoMo</span><span class="mdot">✦</span>
+          <span>Stripe</span><span class="mdot">✦</span>
+          <span>Apple Ecosystem</span><span class="mdot">✦</span>
+          <span>Figma</span><span class="mdot">✦</span>
+          <span>Git</span><span class="mdot">✦</span>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         2. ABOUT
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="about" class="about section" aria-labelledby="about-heading">
+      <div class="section-orb section-orb-1" aria-hidden="true"></div>
+      <div class="section-orb section-orb-2" aria-hidden="true"></div>
+      <div class="container">
+        <span class="section-label">About</span>
+        <h2 id="about-heading" class="section-heading reveal">Who I am</h2>
+
+        <div class="about-grid">
+
+          <!-- Photo + Stats column -->
+          <div class="about-left">
+            <div class="about-photo-wrap reveal">
+              <img src="projects/photo.png" alt="Abdul-Rashid Bushran, full-stack developer in Kumasi, Ghana" loading="lazy">
+            </div>
+
+            <div class="stats-grid reveal">
+              <div class="stat"><span class="stat-n">1+</span><span class="stat-l">yrs shipping</span></div>
+              <div class="stat"><span class="stat-n">5+</span><span class="stat-l">projects live</span></div>
+              <div class="stat"><span class="stat-n">🍎</span><span class="stat-l">Apple specialist</span></div>
+              <div class="stat"><span class="stat-n">📲</span><span class="stat-l">MoMo-ready builds</span></div>
+            </div>
+          </div>
+
+          <!-- Bio column -->
+          <div class="about-right">
+            <p class="about-p reveal">
+              I'm <strong>Abdul-Rashid Bushran</strong>, a full-stack developer based in Bolgatanga, Ghana — and I'm probably the only developer you'll meet who can build your e-commerce platform <em>and</em> sell you the MacBook to run it on. Through <strong>MarshalTech Hub</strong>, I've built a cross-service model that's genuinely different: I supply iPhones, MacBooks, and Apple accessories to students, SMBs, and content creators across Ghana — then build the digital infrastructure they need to grow.
+            </p>
+            <p class="about-p reveal">
+              On the development side, I ship full-stack systems that solve real business problems: hotel booking platforms, e-commerce stores with Paystack and MoMo integration, property listing sites, POS systems, and management dashboards. I care deeply about performance — most of my clients are on mobile networks, so every kilobyte counts.
+            </p>
+            <p class="about-p reveal">
+              The Apple angle isn't just a business line — it shapes how I build. I care about the premium feel, the attention to detail, the sense that software should delight rather than just function. Based in Bolgatanga, serving clients across Accra, Bolgatanga, and beyond.
+            </p>
+
+            <div class="about-tags reveal">
+              <span class="tag">🇬🇭 Bolgatanga, Ghana</span>
+              <span class="tag">⚡ Full-stack dev</span>
+              <span class="tag">🍎 Apple reseller</span>
+              <span class="tag">📱 MoMo integration</span>
+              <span class="tag">🏢 MarshalTech Hub</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         3. SKILLS
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="skills" class="skills section" aria-labelledby="skills-heading">
+      <div class="section-orb section-orb-1" aria-hidden="true"></div>
+      <div class="section-orb section-orb-2" aria-hidden="true"></div>
+      <div class="container">
+        <span class="section-label">Skills</span>
+        <h2 id="skills-heading" class="section-heading reveal">What I work with</h2>
+
+        <div class="skills-grid">
+
+          <!-- Frontend -->
+          <div class="skill-cat reveal">
+            <div class="skill-cat-head">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <span>Frontend</span>
+            </div>
+            <div class="skill-tags">
+              <span class="stag stag-blue">HTML5</span>
+              <span class="stag stag-blue">CSS3</span>
+              <span class="stag stag-blue">JavaScript</span>
+              <span class="stag stag-blue">React</span>
+              <span class="stag stag-blue">Next.js</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-cat reveal">
+            <div class="skill-cat-head">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <span>Backend</span>
+            </div>
+            <div class="skill-tags">
+              <span class="stag stag-green">PHP</span>
+              <span class="stag stag-green">Node.js</span>
+              <span class="stag stag-green">Java</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-cat reveal">
+            <div class="skill-cat-head">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              <span>Databases</span>
+            </div>
+            <div class="skill-tags">
+              <span class="stag stag-purple">MySQL</span>
+              <span class="stag stag-purple">MongoDB</span>
+            </div>
+          </div>
+
+          <!-- Tools & Integrations -->
+          <div class="skill-cat reveal">
+            <div class="skill-cat-head">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              <span>Tools &amp; Integrations</span>
+            </div>
+            <div class="skill-tags">
+              <span class="stag stag-gold">Stripe</span>
+              <span class="stag stag-gold">Paystack</span>
+              <span class="stag stag-gold">MoMo</span>
+              <span class="stag stag-gold">Git</span>
+              <span class="stag stag-gold">Figma</span>
+              <span class="stag stag-gold">Apple Ecosystem</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         4. PROJECTS (Bento Grid)
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="projects" class="projects section" aria-labelledby="projects-heading">
+      <div class="container">
+        <span class="section-label">Work</span>
+        <h2 id="projects-heading" class="section-heading reveal">Selected projects</h2>
+
+        <!--
+          BENTO GRID — CSS grid layout, varied column spans.
+          To add a new project: copy any article block, update content + links.
+          Card sizes are controlled via .bento-grid nth-child rules in styles.css.
+        -->
+        <div class="bento-grid">
+
+          <!-- ── Card 1: FEATURED (large, 4 cols × 2 rows) ── -->
+          <article class="pcard pcard-featured reveal" aria-label="Nab Hotel and Events project">
+            <div class="pthumb">
+              <img src="projects/nab-hotel.png" alt="Nab Hotel and Events — responsive multi-page hotel website with booking, gallery, and events" loading="lazy">
+            </div>
+            <div class="pinfo">
+              <span class="pnum">01</span>
+              <h3 class="ptitle">Nab Hotel &amp; Events</h3>
+              <p class="pdesc">Responsive multi-page hotel website with room booking, gallery, dining, events, special offers, and contact management.</p>
+              <div class="pstack">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Java</span>
+              </div>
+              <div class="plinks">
+                <!-- TODO: Replace # with actual live URL -->
+                <a href="#" class="plink" data-magnetic target="_blank" rel="noopener noreferrer" aria-label="Nab Hotel live demo">
+                  Live demo
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <!-- TODO: Replace # with actual GitHub URL -->
+                <a href="#" class="plink plink-ghost" target="_blank" rel="noopener noreferrer" aria-label="Nab Hotel source code on GitHub">
+                  GitHub
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── Card 2 ── -->
+          <article class="pcard reveal" aria-label="E-commerce Platform project">
+            <div class="pthumb">
+              <img src="projects/ecommerce.png" alt="E-commerce Platform — full-featured online store with admin dashboard and multi-gateway payments" loading="lazy">
+            </div>
+            <div class="pinfo">
+              <span class="pnum">02</span>
+              <h3 class="ptitle">E-commerce Platform</h3>
+              <p class="pdesc">Full-featured online store with admin dashboard, Stripe &amp; Paystack payments, and mobile-responsive UI.</p>
+              <div class="pstack"><span>Next.js</span><span>PHP</span><span>MySQL</span></div>
+              <div class="plinks">
+                <a href="#" class="plink" data-magnetic target="_blank" rel="noopener noreferrer" aria-label="E-commerce Platform live demo">Live demo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                <a href="#" class="plink plink-ghost" target="_blank" rel="noopener noreferrer" aria-label="E-commerce Platform on GitHub">GitHub <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── Card 3 ── -->
+          <article class="pcard reveal" aria-label="Real Estate Platform project">
+            <div class="pthumb">
+              <img src="projects/real-estate.png" alt="Real Estate Platform — property listings with search, filters, gallery, and inquiry management" loading="lazy">
+            </div>
+            <div class="pinfo">
+              <span class="pnum">03</span>
+              <h3 class="ptitle">Real Estate Platform</h3>
+              <p class="pdesc">Property listings with search, filters, gallery views, and inquiry management.</p>
+              <div class="pstack"><span>Next.js</span><span>PHP</span><span>MySQL</span></div>
+              <div class="plinks">
+                <a href="#" class="plink" data-magnetic target="_blank" rel="noopener noreferrer" aria-label="Real Estate Platform live demo">Live demo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                <a href="#" class="plink plink-ghost" target="_blank" rel="noopener noreferrer" aria-label="Real Estate Platform on GitHub">GitHub <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── Card 4 ── -->
+          <article class="pcard reveal" aria-label="Hotel Management System project">
+            <div class="pthumb">
+              <img src="projects/hotel-mgmt.png" alt="Hotel Management System — booking, check-in/out, room management, billing, and staff dashboard" loading="lazy">
+            </div>
+            <div class="pinfo">
+              <span class="pnum">04</span>
+              <h3 class="ptitle">Hotel Management System</h3>
+              <p class="pdesc">Booking, check-in/out, room management, billing, and staff dashboard — all in one.</p>
+              <div class="pstack"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+              <div class="plinks">
+                <a href="#" class="plink" data-magnetic target="_blank" rel="noopener noreferrer" aria-label="Hotel Management System live demo">Live demo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                <a href="#" class="plink plink-ghost" target="_blank" rel="noopener noreferrer" aria-label="Hotel Management System on GitHub">GitHub <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── Card 5 ── -->
+          <article class="pcard reveal" aria-label="QuickMart POS supermarket system project">
+            <div class="pthumb">
+              <img src="projects/quickmart-pos.png" alt="QuickMart POS — supermarket point-of-sale system with Ghanaian products, barcode scanning, and Mobile Money payments" loading="lazy">
+            </div>
+            <div class="pinfo">
+              <span class="pnum">05</span>
+              <h3 class="ptitle">QuickMart POS</h3>
+              <p class="pdesc">Full supermarket POS with barcode scanning, category filters, cart management, and Cash / Mobile Money / Card checkout. Built around Ghanaian product catalogues and cedi pricing.</p>
+              <div class="pstack"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>MoMo</span></div>
+              <div class="plinks">
+                <a href="#" class="plink" data-magnetic target="_blank" rel="noopener noreferrer" aria-label="Supermarket System live demo">Live demo <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                <a href="#" class="plink plink-ghost" target="_blank" rel="noopener noreferrer" aria-label="Supermarket System on GitHub">GitHub <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── Card 6: GitHub CTA tile ── -->
+          <a href="https://github.com/rashbush88-spec" class="pcard pcard-github reveal" target="_blank" rel="noopener noreferrer" aria-label="View more projects on GitHub">
+            <div class="github-tile">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              <span>More on GitHub</span>
+              <svg class="gh-arrow" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+        </div><!-- /bento-grid -->
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         5. RESUME
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="resume" class="resume section" aria-labelledby="resume-heading">
+      <div class="container">
+        <span class="section-label">Resume</span>
+        <h2 id="resume-heading" class="section-heading reveal">Experience &amp; Education</h2>
+
+        <div class="resume-grid">
+
+          <!-- Timeline -->
+          <div class="timeline reveal">
+            <div class="tl-item">
+              <div class="tl-date">2023 — Present</div>
+              <div class="tl-body">
+                <h3>Founder &amp; Lead Developer</h3>
+                <p class="tl-org">MarshalTech Hub · Bolgatanga, Ghana</p>
+                <p class="tl-desc">Full-stack development services for Ghanaian SMBs alongside Apple product sales. Building MoMo-integrated platforms, e-commerce stores, and management systems for local businesses.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">2022 — 2023</div>
+              <div class="tl-body">
+                <h3>Full-stack Developer</h3>
+                <p class="tl-org">Freelance · Remote</p>
+                <p class="tl-desc">Built and shipped web systems including hotel management, e-commerce, and real estate platforms for clients in Ghana.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">2024</div>
+              <div class="tl-body">
+                <h3>Bachelor's Degree</h3>
+                <p class="tl-org">University of Professional Studies, Accra (UPSA)</p>
+                <p class="tl-desc">Graduated 2024. Applied the academic foundations directly to real-world systems built through MarshalTech Hub.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-date">2026 (Expected)</div>
+              <div class="tl-body">
+                <h3>Diploma</h3>
+                <p class="tl-org">IPMC</p>
+                <p class="tl-desc">Professional diploma programme, expected completion 2026.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download CTA -->
+          <div class="resume-aside reveal">
+            <div class="resume-cta-card">
+              <p>Want the full picture? My CV covers everything in detail.</p>
+              <!-- TODO: Add your CV file at /cv.pdf -->
+              <a href="cv.pdf" class="btn btn-primary" data-magnetic download>
+                Download CV
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         6. BLOG
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="blog" class="blog section" aria-labelledby="blog-heading">
+      <div class="container">
+        <span class="section-label">Blog</span>
+        <h2 id="blog-heading" class="section-heading reveal">Writing</h2>
+
+        <div class="blog-grid">
+
+          <!-- TODO: Replace these with your real post titles, dates, and URLs when ready -->
+          <article class="blog-card reveal">
+            <div class="blog-meta">
+              <span class="blog-date">Coming soon</span>
+              <span class="blog-tag">Payments</span>
+            </div>
+            <h3 class="blog-title">Building MoMo-ready checkouts in Ghana</h3>
+            <p class="blog-excerpt">A practical guide to integrating MTN Mobile Money and Vodafone Cash into your e-commerce platform — with real code and lessons learned.</p>
+            <!-- TODO: Replace with actual post URL -->
+            <a href="blog/momo-checkout.html" class="blog-more">
+              Read more
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <article class="blog-card reveal">
+            <div class="blog-meta">
+              <span class="blog-date">Coming soon</span>
+              <span class="blog-tag">Design</span>
+            </div>
+            <h3 class="blog-title">Why Apple-first design matters for SMBs</h3>
+            <p class="blog-excerpt">Most Ghanaian SMB owners use iPhones. Here's why designing for Safari and iOS first changes the game — and how I do it at MarshalTech Hub.</p>
+            <!-- TODO: Replace with actual post URL -->
+            <a href="blog/apple-first-design.html" class="blog-more">
+              Read more
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+          <article class="blog-card reveal">
+            <div class="blog-meta">
+              <span class="blog-date">Coming soon</span>
+              <span class="blog-tag">Case Study</span>
+            </div>
+            <h3 class="blog-title">From idea to live hotel site in 2 weeks</h3>
+            <p class="blog-excerpt">How I scoped, designed, and shipped a full hotel booking website solo, on a deadline — and what I'd do differently next time.</p>
+            <!-- TODO: Replace with actual post URL -->
+            <a href="blog/hotel-site-2-weeks.html" class="blog-more">
+              Read more
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </article>
+
+        </div>
+
+        <div class="blog-footer reveal">
+          <!-- TODO: Update once your /blog page is built -->
+          <a href="blog/index.html" class="btn btn-outline">View all posts</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════════
+         7. CONTACT
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="contact" class="contact section" aria-labelledby="contact-heading">
+      <div class="container">
+        <span class="section-label">Contact</span>
+        <h2 id="contact-heading" class="section-heading reveal">Let's build something</h2>
+
+        <div class="contact-grid">
+
+          <div class="contact-text reveal">
+            <p>Have a project in mind? Looking to hire? Or just want to talk tech? Drop me a message — I read everything and reply fast.</p>
+            <div class="socials">
+              <a href="https://github.com/rashbush88-spec" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                GitHub
+              </a>
+              <a href="mailto:rashbush88@gmail.com" class="social-link" aria-label="Email Abdul-Rashid">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                rashbush88@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <!--
+            FORMSPREE SETUP (free — 50 submissions/month, no backend needed):
+            ─────────────────────────────────────────────────────────────────
+            1. Go to https://formspree.io and sign up (free)
+            2. Click "New Form" → name it "Portfolio Contact"
+            3. Copy your Form ID (looks like: xyzabcde)
+            4. Replace YOUR_FORM_ID in the action URL below with that ID
+            5. Done — submissions arrive in rashbush88@gmail.com
+            ─────────────────────────────────────────────────────────────────
+            Until you add your ID, the form falls back to mailto: automatically.
+          -->
+          <form
+            class="contact-form reveal"
+            id="contactForm"
+            action="https://formspree.io/f/mvzdazaj"
+            method="POST"
+            novalidate
+            aria-label="Contact form"
+          >
+            <div class="fgroup">
+              <label for="name">Name</label>
+              <input type="text"  id="name"    name="name"    placeholder="Your name"        required autocomplete="name">
+              <span class="ferr" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="fgroup">
+              <label for="email">Email</label>
+              <input type="email" id="email"   name="email"   placeholder="your@email.com"   required autocomplete="email">
+              <span class="ferr" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="fgroup">
+              <label for="message">Message</label>
+              <textarea           id="message" name="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+              <span class="ferr" role="alert" aria-live="polite"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" data-magnetic id="submitBtn">
+              Send message
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-ok" id="formOk" role="status" aria-live="polite" hidden>
+              ✓ Message sent! I'll get back to you soon.
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <span class="footer-copy">© <span id="yr"></span> Abdul-Rashid Bushran</span>
+      <span class="footer-line">Built in Ghana, shipped worldwide.</span>
+      <a href="#hero" class="back-top" aria-label="Back to top">
+        Back to top
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
